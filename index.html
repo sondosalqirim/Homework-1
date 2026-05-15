@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /* Part 1:Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #616161;
+            padding: 15px 30px;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 18px;
+        }
+
+        /* Part 2:Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: #eeeeee;
+            border: 2px solid #9e9e9e;
+            text-align: center;
+            padding: 20px;
+            font-size: 22px;
+            color: #424242;
+        }
+
+        .card:first-child {
+            grid-column: span 2;
+
+        }
+
+        /* Part 3:Images */
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Phone */
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .card:first-child {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav>
+        <div class="logo">LOGO</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Photo Gallery -->
+    <div class="gallery">
+
+        <div class="card ">Card 1<br>
+            <img src="https://www.gardenia.net/wp-content/uploads/2024/09/shutterstock_669619393-Optimized.jpg"
+                alt="image">
+        </div>
+
+        <div class="card">Card 2<br>
+            <img src="https://wowbouquet.com/images/2025/02/dahlia-scaled.webp" alt="image">
+        </div>
+
+        <div class="card">Card 3<br>
+            <img src="https://images.plnts.com/optimize/q:80/w:1920/plain/https://plnts-api.ams3.digitaloceanspaces.com/main/Blog_banner_top_10_most_beautiful_flower_bulbs_7e59239269.jpg"
+                alt="image">
+        </div>
+
+        <div class="card"> Card 4<br>
+            <img src="https://www.theenglishgarden.co.uk/_gatsby/file/f3d0bb9d481ea7bb3a175103e8991bb8/shutterstock_2606555139.jpg?imwidth=1440"
+                alt="image">
+        </div>
+
+        <div class="card"> Card 5 <br>
+            <img src="https://hips.hearstapps.com/hmg-prod/images/dahlias-flowers-with-white-petals-on-the-branches-royalty-free-image-1757518785.pjpeg?crop=0.668xw:1.00xh;0.185xw,0&resize=1120:*"
+                alt="image">
+        </div>
+
+        <div class="card"> Card 6 <br>
+            <img src="https://www.gardendesign.com/pictures/images/675x529Max/site_3/helianthus-yellow-flower-pixabay_11863.jpg"
+                alt="image">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
